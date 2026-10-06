@@ -1,0 +1,67 @@
+// ConsoleApplication2.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+struct infomyself {
+
+    string name;
+    int age;
+    string city;
+    string country;
+    int monthsalary;
+    int yearsalary;
+    char gender;
+    bool maried;
+
+ };
+
+
+void readinfo(infomyself &info) {
+
+    cout << "plees enter your name" << endl;
+    cin >> info.name;
+    cout << "plees enter your age" << endl;
+    cin >> info.age;
+    cout << "plees enter your city" << endl;
+    cin >> info.city;
+    cout << "plees enter your country" << endl;
+    cin >> info.country;
+    cout << "plees enter your month salary" << endl;
+    cin >> info.monthsalary;
+    cout << "plees enter your year salary" << endl;
+    cin >> info.yearsalary;
+    cout << "plees enter your gender" << endl;
+    cin >> info.gender;
+    cout << "plees enter if you maried " << endl;
+    cin >> info.maried;
+}
+
+void printinfo(infomyself info) {
+
+    cout << "the name" <<" " << info.name << endl;
+    cout << "the country is"<<" " << info.country << endl;
+    cout << "the city is"<<" " << info.city << endl;
+    cout << "the month salary is "<< " " << info.monthsalary;
+    cout << "the year salary is"<<" " << info.yearsalary << endl;
+    cout << "the gender is" <<" " << info.gender << endl;
+    cout << "the social stacion is " <<" " << info.maried << endl;
+}
+
+int main()
+{
+    infomyself nagham;
+    readinfo(nagham);
+    printinfo(nagham);
+}
+
+// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+// Debug program: F5 or Debug > Start Debugging menu
+
+// Tips for Getting Started: 
+//   1. Use the Solution Explorer window to add/manage files
+//   2. Use the Team Explorer window to connect to source control
+//   3. Use the Output window to see build output and other messages
+//   4. Use the Error List window to view errors
+//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
+//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
