@@ -1,0 +1,44 @@
+// #12.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
+
+#include <iostream>
+using namespace std;
+
+void ReadNumber(int& number1, int&number2,int& number3) {
+    cout << "please enter your number1" << endl;
+    cin >> number1;
+    cout << "please wnter your number2" << endl;
+    cin >> number2;
+    cout << "please enter your number3" << endl;
+    cin >> number3;
+}
+int MaxeOf3Number(int number1, int number2, int number3) {
+    if (number1 > number2)
+        if (number1 > number3)
+            return number1;
+        else if (number2 > number3)
+            return number2;
+        else return number3;
+}
+void printmax(int max) {
+    cout << "the max number is  " << max << endl;
+}
+
+int main()
+{
+    int num1, num2, num3;
+
+        ReadNumber(num1, num2,num3);
+        printmax(MaxeOf3Number(num1, num2,num3));
+}
+
+// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
+// Debug program: F5 or Debug > Start Debugging menu
+
+// Tips for Getting Started: 
+//   1. Use the Solution Explorer window to add/manage files
+//   2. Use the Team Explorer window to connect to source control
+//   3. Use the Output window to see build output and other messages
+//   4. Use the Error List window to view errors
+//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
+//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
