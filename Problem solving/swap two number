@@ -3,27 +3,31 @@
 
 #include <iostream>
 using namespace std;
-void swapnumber(int &number1,int &number2){
-    int full;
-    full = number1;
-    number1 = number2;
-    number2 = full;
-    
+void ReadNumber(int& number1, int& number2){
+	cout << "please enter ypur number1" << endl;
+	cin >> number1;
+	cout << "please enter your number2" << endl;
+	cin >> number2;
 }
-int main()
+int SwapTwoNumber(int& number1, int& number2)
 {
-    int num1, num2;
-
-    cout << "please enter your number" << endl;
-    
-    cin >> num1 >> num2;
-    swapnumber(num1, num2);
-    cout << "the number after swap is" << endl;
-    cout << num1 << endl;
-    cout << num2;
-
+	int mod;
+	mod = number1;
+	number1 = number2;
+	number2 = mod;
+	return number1;
+	return number2;
 }
-
+void PrintSwap(int number1, int number2) {
+	cout << "number1 = " << number1 << endl;
+	cout << "number2 = " << number2 << endl;
+}
+int main() {
+	int num1, num2;
+	ReadNumber(num1, num2);
+	SwapTwoNumber(num1, num2);
+	PrintSwap(num1, num2);
+}
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
